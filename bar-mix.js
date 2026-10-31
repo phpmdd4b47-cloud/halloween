@@ -30,9 +30,9 @@ if("直調"!==p.method){var F=0,A=[0,0,0];w.forEach(function(t){var e=u(t.id)*t.
 return(t=Math.round(Math.max(0,Math.min(255,t))).toString(16)).length<2?"0"+t:t}).join("")),opacity:.88}))}else{var M=w.reduce(function(t,e){
 return t+u(e.id)*e.n},0);w.forEach(function(t){var e=C*E*(u(t.id)*t.n/M);k-=e,d.appendChild(y("rect",{x:0,y:k,width:100,height:e+(k+e>=n.bot?6:.6),
 fill:m(t.id).col,opacity:.88}))})}var L=n.bot-C*E;if(d.appendChild(y("rect",{x:0,y:L,width:100,height:1.4,fill:"rgba(255,255,255,.35)"})),
-"無冰"!==p.ice)for(var B="碎冰"===p.ice?14:3,D="碎冰"===p.ice?5:13,S=0;S< B;S++){var z=24+37*S%52,j=Math.max(n.top+2,L-4)+23*S%Math.max(8,C*E*.6)
-;d.appendChild(y("rect",{x:z,y:j,width:D,height:D,rx:2,fill:"rgba(255,255,255,.22)",stroke:"rgba(255,255,255,.55)","stroke-width":.8,
-transform:"rotate("+(29*S%40-20)+" "+(z+D/2)+" "+(j+D/2)+")"}))}if(t.st[4]>.6)for(var O=0;O<9;O++){var Q=y("circle",{cx:30+13*O%40,cy:n.bot-4-11*O%10,
+"無冰"!==p.ice)for(var B="碎冰"===p.ice?14:3,D="碎冰"===p.ice?5:13,S=0;S< B;S++){var j=24+37*S%52,z=Math.max(n.top+2,L-4)+23*S%Math.max(8,C*E*.6)
+;d.appendChild(y("rect",{x:j,y:z,width:D,height:D,rx:2,fill:"rgba(255,255,255,.22)",stroke:"rgba(255,255,255,.55)","stroke-width":.8,
+transform:"rotate("+(29*S%40-20)+" "+(j+D/2)+" "+(z+D/2)+")"}))}if(t.st[4]>.6)for(var O=0;O<9;O++){var Q=y("circle",{cx:30+13*O%40,cy:n.bot-4-11*O%10,
 r:1+O%2*.6,fill:"rgba(255,255,255,.75)",class:"bub"});Q.style.animationDelay=.2*O+"s",d.appendChild(Q)}if(Object.keys(p.qty).some(function(t){
 return 0===t.indexOf("m:")&&p.qty[t]>0}))for(var I=0;I<6;I++)d.appendChild(y("circle",{cx:30+8*I,cy:L+4+I%3*6,r:1.3,fill:"#E8D8FF",opacity:.9,class:"bub"}))}
 e.appendChild(y("path",{d:n.path,fill:"none",stroke:"rgba(255,255,255,.6)","stroke-width":1.6})),e.appendChild(y("path",{
@@ -113,4 +113,7 @@ a&&!/^空|^無/.test(a[1].trim())&&a[1].split(/[、,，](?![^（(]*[)）])/).for
 ;e?h[e[1].trim()]=parseInt(e[2],10):t&&(h[t.replace(/[（(].*[)）]/,"").trim()]=1)});n=p.seats.findIndex(function(t){return!t.empty})
 ;p.seats[p.seat]&&p.seats[p.seat].empty&&n>=0&&(p.seat=n)}}catch(t){}E(),renderStatus()}()}function S(){B.classList.remove("show"),L.classList.remove("on")}
 L.addEventListener("click",function(){B.classList.contains("show")?S():D()}),s(".mx-x2").addEventListener("click",S),
-s(".mx-who").addEventListener("click",function(){p.tab="seat",E()}),E()})}();
+s(".mx-who").addEventListener("click",function(){p.tab="seat",E()});var j=s(".nx2");if(j){
+var z=String((s(".mx-raw")||{}).value||"").match(/營業\s*[：:]\s*([^\n]*)/);z&&/打烊/.test(z[1])&&(j.disabled=!1),j.addEventListener("click",function(){
+if(!j.disabled){for(var t=[],e=1;e<=24;e++)t.push(e);for(var a=[],n=0;n<3;n++)a.push(t.splice(Math.floor(Math.random()*t.length),1)[0])
+;d("【下一夜】\n#謎"+a.join(" 謎"),function(){j.disabled=!0},function(){})}})}E()})}();

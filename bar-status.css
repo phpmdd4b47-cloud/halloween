@@ -102,5 +102,5 @@
 .mxs{padding-bottom:12px!important;margin-top:6px!important;}
 .gb-open,.nx-open{display:none!important;}
 .mx-row2>.sb-open{width:100%;padding:10px 0!important;font-size:15px!important;letter-spacing:.2em!important;}
-.mxs{display:inline-block!important;width:calc(50% - 8px)!important;vertical-align:top;margin:10px 0 0 4px!important;padding-bottom:12px!important;}
-.mx-row2>.sb-open{padding:10px 0!important;font-size:14px!important;letter-spacing:.15em!important;}
+.mxs{display:inline-block!important;width:calc(25% - 6px)!important;vertical-align:top;margin:10px 0 0 0!important;padding-bottom:12px!important;}
+.mx-row2>.sb-open{padding:10px 0!important;font-size:12px!important;letter-spacing:.02em!important;white-space:nowrap;}
