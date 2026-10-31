@@ -27,50 +27,52 @@ d:n.path})),c.appendChild(l),e.appendChild(c),e.appendChild(y("path",{d:n.path,f
 if("直調"!==p.method){var F=0,A=[0,0,0];w.forEach(function(t){var e=u(t.id)*t.n,a=function(t){return t=t.replace("#",""),
 [parseInt(t.substr(0,2),16),parseInt(t.substr(2,2),16),parseInt(t.substr(4,2),16)]}(m(t.id).col);F+=e;for(var n=0;n<3;n++)A[n]+=a[n]*e});var q=C*E
 ;d.appendChild(y("rect",{x:0,y:n.bot-q,width:100,height:q+6,fill:(h=A.map(function(t){return t/F}),"#"+h.map(function(t){
-return(t=Math.round(Math.max(0,Math.min(255,t))).toString(16)).length<2?"0"+t:t}).join("")),opacity:.88}))}else{var M=w.reduce(function(t,e){
-return t+u(e.id)*e.n},0);w.forEach(function(t){var e=C*E*(u(t.id)*t.n/M);k-=e,d.appendChild(y("rect",{x:0,y:k,width:100,height:e+(k+e>=n.bot?6:.6),
-fill:m(t.id).col,opacity:.88}))})}var L=n.bot-C*E;if(d.appendChild(y("rect",{x:0,y:L,width:100,height:1.4,fill:"rgba(255,255,255,.35)"})),
-"無冰"!==p.ice)for(var B="碎冰"===p.ice?14:3,D="碎冰"===p.ice?5:13,S=0;S< B;S++){var j=24+37*S%52,z=Math.max(n.top+2,L-4)+23*S%Math.max(8,C*E*.6)
+return(t=Math.round(Math.max(0,Math.min(255,t))).toString(16)).length<2?"0"+t:t}).join("")),opacity:.88}))}else{var L=w.reduce(function(t,e){
+return t+u(e.id)*e.n},0);w.forEach(function(t){var e=C*E*(u(t.id)*t.n/L);k-=e,d.appendChild(y("rect",{x:0,y:k,width:100,height:e+(k+e>=n.bot?6:.6),
+fill:m(t.id).col,opacity:.88}))})}var M=n.bot-C*E;if(d.appendChild(y("rect",{x:0,y:M,width:100,height:1.4,fill:"rgba(255,255,255,.35)"})),
+"無冰"!==p.ice)for(var B="碎冰"===p.ice?14:3,D="碎冰"===p.ice?5:13,S=0;S< B;S++){var j=24+37*S%52,z=Math.max(n.top+2,M-4)+23*S%Math.max(8,C*E*.6)
 ;d.appendChild(y("rect",{x:j,y:z,width:D,height:D,rx:2,fill:"rgba(255,255,255,.22)",stroke:"rgba(255,255,255,.55)","stroke-width":.8,
 transform:"rotate("+(29*S%40-20)+" "+(j+D/2)+" "+(z+D/2)+")"}))}if(t.st[4]>.6)for(var O=0;O<9;O++){var Q=y("circle",{cx:30+13*O%40,cy:n.bot-4-11*O%10,
 r:1+O%2*.6,fill:"rgba(255,255,255,.75)",class:"bub"});Q.style.animationDelay=.2*O+"s",d.appendChild(Q)}if(Object.keys(p.qty).some(function(t){
-return 0===t.indexOf("m:")&&p.qty[t]>0}))for(var I=0;I<6;I++)d.appendChild(y("circle",{cx:30+8*I,cy:L+4+I%3*6,r:1.3,fill:"#E8D8FF",opacity:.9,class:"bub"}))}
+return 0===t.indexOf("m:")&&p.qty[t]>0}))for(var T=0;T<6;T++)d.appendChild(y("circle",{cx:30+8*T,cy:M+4+T%3*6,r:1.3,fill:"#E8D8FF",opacity:.9,class:"bub"}))}
 e.appendChild(y("path",{d:n.path,fill:"none",stroke:"rgba(255,255,255,.6)","stroke-width":1.6})),e.appendChild(y("path",{
 d:"M"+("mug"===a?22:"high"===a?35:30)+" "+(n.top+6)+" L"+("mug"===a?22:"high"===a?36:31)+" "+(n.bot-10),stroke:"rgba(255,255,255,.35)","stroke-width":2,
 "stroke-linecap":"round"})),n.handle&&e.appendChild(y("path",{d:n.handle,fill:"none",stroke:"rgba(255,255,255,.6)","stroke-width":3}))
-;var R="rocks"===a?60:"high"===a?18:26,T="rocks"===a?78:"high"===a?70:72,H="rocks"===a?22:"high"===a?30:16;(p.qty.srim||p.qty.grim)&&e.appendChild(y("line",{
-x1:H,y1:R,x2:T,y2:R,stroke:"#fff","stroke-width":2.4,"stroke-dasharray":"1.2 1.6",opacity:.85})),p.qty.mint&&e.appendChild(y("ellipse",{cx:T-8,cy:R-5,rx:7,
-ry:3.5,fill:"#3E9B5A",transform:"rotate(-30 "+(T-8)+" "+(R-5)+")"})),p.qty.cherry&&(e.appendChild(y("circle",{cx:H+10,cy:R-4,r:4.5,fill:"#B3122A"})),
-e.appendChild(y("path",{d:"M"+(H+10)+" "+(R-8)+" q4 -8 9 -9",stroke:"#4a6b2a","stroke-width":1.2,fill:"none"}))),
-(p.qty.lpeel||p.qty.opeel)&&e.appendChild(y("path",{d:"M"+(T-4)+" "+(R-2)+" q8 -2 6 8 q-2 6 4 8",stroke:p.qty.opeel?"#F08A24":"#F2DF4A","stroke-width":2.4,
+;var I="rocks"===a?60:"high"===a?18:26,R="rocks"===a?78:"high"===a?70:72,_="rocks"===a?22:"high"===a?30:16;(p.qty.srim||p.qty.grim)&&e.appendChild(y("line",{
+x1:_,y1:I,x2:R,y2:I,stroke:"#fff","stroke-width":2.4,"stroke-dasharray":"1.2 1.6",opacity:.85})),p.qty.mint&&e.appendChild(y("ellipse",{cx:R-8,cy:I-5,rx:7,
+ry:3.5,fill:"#3E9B5A",transform:"rotate(-30 "+(R-8)+" "+(I-5)+")"})),p.qty.cherry&&(e.appendChild(y("circle",{cx:_+10,cy:I-4,r:4.5,fill:"#B3122A"})),
+e.appendChild(y("path",{d:"M"+(_+10)+" "+(I-8)+" q4 -8 9 -9",stroke:"#4a6b2a","stroke-width":1.2,fill:"none"}))),
+(p.qty.lpeel||p.qty.opeel)&&e.appendChild(y("path",{d:"M"+(R-4)+" "+(I-2)+" q8 -2 6 8 q-2 6 4 8",stroke:p.qty.opeel?"#F08A24":"#F2DF4A","stroke-width":2.4,
 fill:"none","stroke-linecap":"round"})),t.vol>n.cap&&e.appendChild(y("ellipse",{cx:50,cy:128,rx:30+Math.min(20,3*(t.vol-n.cap)),ry:3,
 fill:w.length?m(w[w.length-1].id).col:"#fff",opacity:.6}))}var b=Math.random().toString(36).slice(2,7);function C(t){var e=0;return p.tray.forEach(function(a){
 e+=a.myst&&a.myst[t]||0}),(h[t]||0)-e}function E(){var a=f();r.forEach(function(t,e){var n=o.querySelectorAll(".mx-bar")[e]
 ;n.querySelector("b").style.width=a.st[e]/5*100+"%",n.querySelector(".mx-bv").textContent=a.st[e].toFixed(1)}),s(".mx-parts").textContent=a.parts,
 s(".mx-price").textContent=a.price;var n=s(".mx-hit");n.textContent="✦ "+a.hit,n.classList.toggle("show",!!a.hit),
 o.querySelectorAll(".mx-tab").forEach(function(t){t.classList.toggle("on",t.getAttribute("data-t")===p.tab)}),
-s(".mx-tab[data-t=tray]").textContent="托盤 "+p.tray.length+"/4";var c=s(".mx-body");c.innerHTML="","mat"===p.tab&&c.appendChild(function(){
-var a=i("div"),n=i("div","mx-cats");a.appendChild(n),t.forEach(function(t){var e=i("button","mx-cat"+(p.cat===t[0]?" on":""),t[1])
-;e.addEventListener("click",function(){p.cat=t[0],E()}),n.appendChild(e)});var o=i("div","mx-list");a.appendChild(o)
-;var s="myst"===p.cat?Object.keys(h).map(function(t){return"m:"+t}):e.filter(function(t){return t[2]===p.cat}).map(function(t){return t[0]})
+s(".mx-tab[data-t=tray]").textContent="托盤 "+p.tray.length+"/4"
+;var c=s(".mx-list"),l=s(".mx-cats"),d=c?c.scrollTop:0,u=l?l.scrollLeft:0,v=p._lc===p.cat&&p._lt===p.tab,y=s(".mx-body");y.innerHTML="",
+"mat"===p.tab&&y.appendChild(function(){var a=i("div"),n=i("div","mx-cats");a.appendChild(n),t.forEach(function(t){
+var e=i("button","mx-cat"+(p.cat===t[0]?" on":""),t[1]);e.addEventListener("click",function(){p.cat=t[0],E()}),n.appendChild(e)});var o=i("div","mx-list")
+;a.appendChild(o);var s="myst"===p.cat?Object.keys(h).map(function(t){return"m:"+t}):e.filter(function(t){return t[2]===p.cat}).map(function(t){return t[0]})
 ;s.length||o.appendChild(i("div","mx-empty","myst"===p.cat?"神秘櫃是空的":"沒有材料"));return s.forEach(function(t){var e=m(t),a=i("div","mx-row"),n=i("i","mx-dot")
 ;n.style.background=e.col,a.appendChild(n);var s=i("div","mx-nm",e.n),c=[];"myst"===e.c?c.push("剩 "+C(e.n)+" 份"):(e.s.forEach(function(t,e){t&&c.push(r[e]+t)}),
 e.f&&c.push(e.f)),c.length&&s.appendChild(i("small","",c.join("・"))),a.appendChild(s)
 ;var l=p.qty[t]||0,d=i("button","mx-qb","−"),h=i("span","mx-qn"+(l?" has":""),l),u=i("button","mx-qb","+");d.disabled=!l,
 "myst"===e.c&&l>=C(e.n)&&(u.disabled=!0),d.addEventListener("click",function(){F(t,-1)}),u.addEventListener("click",function(){F(t,1)}),a.appendChild(d),
-a.appendChild(h),a.appendChild(u),o.appendChild(a)}),a}()),"ice"===p.tab&&c.appendChild(function(){var t=i("div");t.appendChild(i("div","mx-h","✦ 冰"))
+a.appendChild(h),a.appendChild(u),o.appendChild(a)}),a}()),"ice"===p.tab&&y.appendChild(function(){var t=i("div");t.appendChild(i("div","mx-h","✦ 冰"))
 ;var e=i("div","mx-opts");[["無冰","原汁原味"],["冰塊","標準"],["碎冰","稀釋、冰涼"]].forEach(function(t){var a=i("button","mx-opt"+(p.ice===t[0]?" on":""),t[0])
 ;a.appendChild(i("small","",t[1])),a.addEventListener("click",function(){p.ice=t[0],E()}),e.appendChild(a)}),t.appendChild(e),
 t.appendChild(i("div","mx-h","✦ 手法"));var a=i("div","mx-opts");return[["直調","保留分層"],["攪拌","清澈順口"],["搖盪","綿密、去氣泡"]].forEach(function(t){
 var e=i("button","mx-opt"+(p.method===t[0]?" on":""),t[0]);e.appendChild(i("small","",t[1])),e.addEventListener("click",function(){if(p.method=t[0],E(),
 "搖盪"===t[0]){var e=s(".mx-gl");e.classList.remove("shake"),e.getBoundingClientRect(),e.classList.add("shake")}}),a.appendChild(e)}),t.appendChild(a),t}()),
-"seat"===p.tab&&c.appendChild(function(){for(var t=i("div","mx-seats"),e=0;e<4;e++)(function(e){
+"seat"===p.tab&&y.appendChild(function(){for(var t=i("div","mx-seats"),e=0;e<4;e++)(function(e){
 var a=p.seats[e]||{},n=i("button","mx-seat"+(p.seat===e?" on":"")+(a.empty?" void":""),a.name||"客席 "+"ABCD"[e])
 ;n.appendChild(i("small","",a.empty?"空位":a.info||"—")),n.addEventListener("click",function(){p.seat=e,E()}),t.appendChild(n)})(e);return t}()),
-"tray"===p.tab&&c.appendChild(function(){var t=i("div","mx-tray");if(!p.tray.length)return t.appendChild(i("div","mx-empty","托盤上還沒有酒")),t
+"tray"===p.tab&&y.appendChild(function(){var t=i("div","mx-tray");if(!p.tray.length)return t.appendChild(i("div","mx-empty","托盤上還沒有酒")),t
 ;return p.tray.forEach(function(e,a){var n=i("div","mx-ti"),r=i("div","","給 "+e.to);r.appendChild(i("small","",e.line.split("：").slice(1).join("："))),
-n.appendChild(r);var o=i("button","","✕");o.addEventListener("click",function(){p.tray.splice(a,1),M(),E()}),n.appendChild(o),t.appendChild(n)}),t}())
-;var l=p.seats[p.seat];s(".mx-who b").textContent=l&&l.name?l.name:"客席 "+"ABCD"[p.seat],s(".mx-serve").disabled=!p.tray.length,
+n.appendChild(r);var o=i("button","","✕");o.addEventListener("click",function(){p.tray.splice(a,1),L(),E()}),n.appendChild(o),t.appendChild(n)}),t}())
+;var g=s(".mx-list"),b=s(".mx-cats");b&&(b.scrollLeft=u),g&&v&&(g.scrollTop=d),p._lc=p.cat,p._lt=p.tab;var k=p.seats[p.seat]
+;s(".mx-who b").textContent=k&&k.name?k.name:"客席 "+"ABCD"[p.seat],s(".mx-serve").disabled=!p.tray.length,
 s(".mx-serve").textContent="出酒"+(p.tray.length?"（"+p.tray.length+"）":""),x(a)}function k(t){
 var e=s(".mx-st").getBoundingClientRect(),a=s(".mx-gl").getBoundingClientRect(),n=Math.min(a.width/100,a.height/132),r=a.left+(a.width-100*n)/2-e.left,i=a.bottom-132*n-e.top,o=t.vol<=4?"rocks":t.vol<=8?"high":"mug",c=v[o]
 ;return{s:n,cx:r+50*n,top:i+c.top*n,surf:i+(c.bot-(c.bot-c.top)*Math.min(t.vol,c.cap)/c.cap)*n,rimR:r+("rocks"===o?78:"high"===o?70:72)*n}}function w(t,e,a,n){
@@ -87,17 +89,17 @@ animationDelay:60*a+"ms","--dy":e.surf-e.top+20+"px"},1100)}(m(t).col)}else for(
 p.layers[o].n||p.layers.splice(o,1);break}var s,c,l,d;A(""),E()}}function A(t,e){var a=s(".mx-msg");a.textContent=t,a.classList.toggle("ok",!!e)}
 function q(e,a){var n=[];t.forEach(function(t){Object.keys(p.qty).forEach(function(e){var a=p.qty[e];if(a){var r=m(e)
 ;r.c===t[0]&&n.push(r.n+"×"+a+("myst"===r.c?"（神秘）":""))}})}),n.push(p.ice),n.push(p.method);var i=r.map(function(t,a){return t+e.st[a].toFixed(1)}).join(" ")
-;return"給"+a+"："+n.join("、")+"｜"+i+"｜"+(e.tags.join("、")||"無特別風味")+"｜"+e.parts+"份｜"+e.price+"元"+(e.hit?"｜命中："+e.hit:"")}function M(){c}
+;return"給"+a+"："+n.join("、")+"｜"+i+"｜"+(e.tags.join("、")||"無特別風味")+"｜"+e.parts+"份｜"+e.price+"元"+(e.hit?"｜命中："+e.hit:"")}function L(){c}
 s(".mx-put").addEventListener("click",function(){var t=f();if(!t.parts)return A("杯子還是空的");if(p.tray.length>=4)return A("托盤滿了，先出酒");var e=p.seats[p.seat]||{}
 ;if(e.empty)return A("這個座位沒有客人");var a=e.name||"客席 "+"ABCD"[p.seat],n={};Object.keys(p.qty).forEach(function(t){
-0===t.indexOf("m:")&&p.qty[t]&&(n[t.slice(2)]=p.qty[t])}),p.tray.push({to:a,line:q(t,a),myst:n}),p.qty={},p.layers=[],M(),A("已放上托盤：給 "+a,!0),E()}),
+0===t.indexOf("m:")&&p.qty[t]&&(n[t.slice(2)]=p.qty[t])}),p.tray.push({to:a,line:q(t,a),myst:n}),p.qty={},p.layers=[],L(),A("已放上托盤：給 "+a,!0),E()}),
 s(".mx-clear").addEventListener("click",function(){p.qty={},p.layers=[],A(""),E()}),s(".mx-serve").addEventListener("click",function(){
 p.tray.length&&d("【出酒】\n"+p.tray.map(function(t){return t.line}).join("\n"),function(t){p.tray=[],A("已填入輸入框，可以在前面加上動作或台詞再送出",!0),E()},function(t){A(t)})}),
-o.querySelectorAll(".mx-tab").forEach(function(t){t.addEventListener("click",function(){p.tab=t.getAttribute("data-t"),E()})});var L=s(".mx-open"),B=s(".mx-pn")
+o.querySelectorAll(".mx-tab").forEach(function(t){t.addEventListener("click",function(){p.tab=t.getAttribute("data-t"),E()})});var M=s(".mx-open"),B=s(".mx-pn")
 ;function D(){var t,e,a,n,r
 ;t=Math.min(window.screen&&window.screen.height||800,window.screen&&window.screen.width>window.screen.height?window.screen.width:99999),
 e=Math.round(Math.max(150,Math.min(300,.24*t))),o.style.setProperty("--lh",e+"px"),a=B,n=(o.parentElement||o).getBoundingClientRect(),
-r=o.getBoundingClientRect(),a.style.left=n.left-r.left+"px",a.style.right="auto",a.style.width=n.width+"px",B.classList.add("show"),L.classList.add("on"),
+r=o.getBoundingClientRect(),a.style.left=n.left-r.left+"px",a.style.right="auto",a.style.width=n.width+"px",B.classList.add("show"),M.classList.add("on"),
 async function(){var t=(o=String((s(".mx-raw")||{}).value||"").replace(/<[^>]*>/g,"")).match(/客席\s*[：:]\s*([^\n]*)/),e=t?t[1].split(/[／\/]/):[]
 ;p.seats=[0,1,2,3].map(function(t){var a=(e[t]||"空").trim();return!a||/^空/.test(a)?{empty:!0}:{name:a,info:""}});var a=o.match(/神秘櫃\s*[：:]\s*([^\n]*)/);h={},
 a&&!/^空|^無/.test(a[1].trim())&&a[1].split(/[、,，](?![^（(]*[)）])/).forEach(function(t){var e=(t=t.trim()).match(/^(.*?)(?:[（(].*[)）])?\s*[×xX*]\s*(\d+)$/)
@@ -111,8 +113,8 @@ var e=o.match(new RegExp("座位"+t+"\\s*[：:]\\s*([^\\n]*)")),a=e?e[1].trim():
 info:n.slice(1).length?"醉"+(n[1]||"?")+"・滿意"+(n[2]||"?")+"・怒"+(n[3]||"?")+(n[4]?"・"+n[4]:""):""}});a=o.match(/神秘櫃\s*[：:]\s*([^\n]*)/);h={},
 a&&!/^空|^無/.test(a[1].trim())&&a[1].split(/[、,，](?![^（(]*[)）])/).forEach(function(t){var e=(t=t.trim()).match(/^(.*?)(?:[（(].*[)）])?\s*[×xX*]\s*(\d+)$/)
 ;e?h[e[1].trim()]=parseInt(e[2],10):t&&(h[t.replace(/[（(].*[)）]/,"").trim()]=1)});n=p.seats.findIndex(function(t){return!t.empty})
-;p.seats[p.seat]&&p.seats[p.seat].empty&&n>=0&&(p.seat=n)}}catch(t){}E(),renderStatus()}()}function S(){B.classList.remove("show"),L.classList.remove("on")}
-L.addEventListener("click",function(){B.classList.contains("show")?S():D()}),s(".mx-x2").addEventListener("click",S),
+;p.seats[p.seat]&&p.seats[p.seat].empty&&n>=0&&(p.seat=n)}}catch(t){}E(),renderStatus()}()}function S(){B.classList.remove("show"),M.classList.remove("on")}
+M.addEventListener("click",function(){B.classList.contains("show")?S():D()}),s(".mx-x2").addEventListener("click",S),
 s(".mx-who").addEventListener("click",function(){p.tab="seat",E()});var j=s(".nx2");if(j){
 var z=String((s(".mx-raw")||{}).value||"").match(/營業\s*[：:]\s*([^\n]*)/);z&&/打烊/.test(z[1])&&(j.disabled=!1),j.addEventListener("click",function(){
 if(!j.disabled){for(var t=[],e=1;e<=24;e++)t.push(e);for(var a=[],n=0;n<3;n++)a.push(t.splice(Math.floor(Math.random()*t.length),1)[0])
