@@ -58,7 +58,7 @@
 
 .gbx{position:relative;z-index:40;display:inline-block;width:calc(25% - 6px);vertical-align:top;margin:10px 0 0 4px;padding-bottom:12px;font-family:'Noto Sans TC',sans-serif;}
 .gbx *{box-sizing:border-box;}
-.gbx-open{position:relative;display:block;width:100%;padding:10px 0;border-radius:999px;border:1px solid #C49A63;background:linear-gradient(180deg,#5a4c50,#3a3034);color:#F0E5D7;font-family:'Noto Serif TC',serif;font-size:12px;font-weight:700;letter-spacing:.02em;white-space:nowrap;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);-webkit-tap-highlight-color:transparent;touch-action:manipulation;outline:none;}
+.gbx-open{position:relative;display:flex;flex-direction:column;align-items:center;gap:1px;width:100%;padding:6px 0 5px;border-radius:14px;border:1px solid #C49A63;background:linear-gradient(180deg,#5a4c50,#3a3034);color:#F0E5D7;font-family:'Noto Serif TC',serif;font-size:11px;font-weight:700;letter-spacing:.02em;line-height:1.2;white-space:nowrap;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);-webkit-tap-highlight-color:transparent;touch-action:manipulation;outline:none;}
 .gbx-open.on{background:linear-gradient(180deg,#4a4044,#302A30);}
 .gbx-pn{display:none;position:absolute;bottom:100%;margin-bottom:8px;padding:10px;border-radius:12px;border:1px solid rgba(196,154,99,.7);background:radial-gradient(120% 40% at 50% 0%,#3a1e28,#241F26 60%);box-shadow:inset 0 0 0 3px #241F26,inset 0 0 0 4px rgba(196,154,99,.25),0 -8px 28px rgba(0,0,0,.55);}
 .gbx-pn.show{display:block;}
@@ -71,3 +71,6 @@
 .gbx-ic{font-size:30px;opacity:.7;}
 .gbx-none b{display:block;margin-top:6px;font-family:'Noto Serif TC',serif;font-size:14px;font-weight:500;}
 .gbx-none small{display:block;margin-top:4px;font-size:11px;color:#B9A99E;}
+
+.gbx-open i{font-style:normal;font-size:16px;line-height:1.1;}
+.gbx-n{position:absolute;top:-5px;right:4px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#C49A63;color:#2a1a14;font-size:10px;line-height:16px;font-weight:700;}

@@ -130,3 +130,7 @@
 .mx-btns .mx-open{flex:1 1 0;width:auto;padding:10px 0!important;font-size:12px!important;letter-spacing:.02em!important;white-space:nowrap;}
 .nx2{flex:1 1 0;padding:10px 0;border-radius:999px;border:1px solid #C49A63;background:linear-gradient(180deg,#3d4a7a,#26305a);color:#F0E5D7;font-family:'Noto Serif TC',serif;font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer;box-shadow:0 0 12px rgba(120,150,255,.35);-webkit-tap-highlight-color:transparent;touch-action:manipulation;outline:none;}
 .nx2[disabled]{background:#2a2428;border-color:#57464A;color:#6f6266;box-shadow:none;cursor:default;}
+.tabbtn{position:relative;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:6px 0 5px!important;border-radius:14px!important;font-size:11px!important;letter-spacing:.02em!important;line-height:1.2;white-space:nowrap;overflow:visible;}
+.tabbtn i{font-style:normal;font-size:16px;line-height:1.1;}
+.tabbtn span{font-size:11px;}
+.gbx-n{position:absolute;top:-5px;right:4px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#C49A63;color:#2a1a14;font-size:10px;line-height:16px;font-weight:700;font-family:inherit;}
